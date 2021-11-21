@@ -1,0 +1,490 @@
+﻿
+@{
+    ViewBag.Title = "GroupDashboard";
+    Layout = "~/Views/Layouts/_EmptyLayout.cshtml";
+}
+
+<style>
+
+    .chart {
+        display: grid;
+        border: 2px solid #000;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .chart-row {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        background-color: #1e2d41;
+    }
+
+        .chart-row:nth-child(odd) {
+            background-color: #C0C0C0;
+        }
+
+    .chart-period {
+        color: #fff;
+        background-color: #708090 !important;
+        border-bottom: 2px solid #000;
+        grid-template-columns: 50px repeat(12, 1fr);
+    }
+
+    .chart-lines {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+        grid-template-columns: 50px repeat(12, 1fr);
+    }
+
+    .chart-period > span {
+        text-align: center;
+        font-size: 13px;
+        align-self: center;
+        font-weight: bold;
+        padding: 15px 0;
+    }
+
+    .chart-lines > span {
+        display: block;
+        border-right: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .chart-row-item {
+        background-color: #808080;
+        border: 1px solid #000;
+        border-top: 0;
+        border-left: 0;
+        padding: 20px 0;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .chart-row-bars {
+        list-style: none;
+        display: grid;
+        padding: 15px 0;
+        margin: 0;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 10px 0;
+        border-bottom: 1px solid #000;
+    }
+
+    li {
+        font-weight: 450;
+        text-align: left;
+        font-size: 15px;
+        min-height: 15px;
+        background-color: #191c24;
+        padding: 5px 15px;
+        color: #fff;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        border-radius: 15px;
+    }
+
+    ul .chart-li-one {
+        grid-column: 1/2;
+        background-color: #588BAE;
+    }
+
+    ul .chart-li-two-a {
+        grid-column: 2/2;
+        background-color: #0080FF;
+    }
+
+    ul .chart-li-two-b {
+        grid-column: 2/4;
+        background-color: #4682B4;
+    }
+
+    ul .chart-li-three {
+        grid-column: 3/5;
+        background-color: #57A0D3;
+    }
+
+    ul .chart-li-four {
+        grid-column: 3/9;
+        background-color: #0E4D92;
+    }
+
+    ul .chart-li-five {
+        grid-column: 7/10;
+        background-color: #4F97A3;
+    }
+
+    ul .chart-li-six {
+        grid-column: 10/12;
+        background-color: #73C2FB;
+    }
+
+    ul .chart-li-seven {
+        grid-column: 12/12;
+        background-color: #0080FF;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+    <div class="container-fluid">
+        <div class="row card">
+            @foreach (var su in ViewData["supervisor"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblGroup>)
+            {
+
+                foreach (var gd in ViewData["ProjectLink"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblProjects>)
+                {
+
+
+
+                    <div class="card card-header">
+                        <h2>@su.groupName</h2>
+                        &nbsp;&nbsp;<h3>Group Leader: <span class="text-muted">@su.leader</span></h3>
+                        &nbsp;&nbsp;<h3>Group Project: <span class="text-muted">@su.groupProject</span></h3><a href="~/StudentProjects/@gd.ProjectProposal">Download</a>
+
+                        &nbsp;&nbsp;<h3>Group Supervisor: <span class="text-muted">@su.groupSupervisor</span></h3>
+                        &nbsp;&nbsp;<h3>Group Members: <span class="text-muted">@su.MembersCount</span></h3>
+                    </div>
+                }
+            }
+
+            @foreach (var pr in ViewData["progress"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblProjectProgress>)
+            {
+                        <div class="col-md-8">
+                            <h5>Project Completion Status:</h5>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: @pr.projectProgress%">
+                                    @pr.projectProgress%
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <hr />
+                    <h3 class="p-2">Weekly Log Chart</h3>
+                    <hr />
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th> Details</th>
+                                <th>Created By</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var lc in ViewData["logchart"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblLogChart>)
+                            {
+                                <tr>
+                                    <td>
+                                        @lc.lcDate
+                                    </td>
+                                    <td>
+                                        @lc.lcDetail
+                                    </td>
+                                    <td>
+                                        @lc.lcCreatedby
+                                    </td>
+                                </tr>
+
+
+                            }
+                            <tr>
+                                @using (Html.BeginForm())
+                                {
+                                    <td>
+                                        Add To Log Chart: <span>Date:</span><input type="date" class="datepicker" name="lcdate" />
+                                    </td>
+                                    <td>
+                                        <span>Details:</span><input type="text" class="form-control" name="detail" />
+                                    </td>
+                                    <td>
+                                        <button type="submit" class="btn btn-success" value="@Session["studentFname"]" name="lcname">Add</button>
+                                    </td>
+                                }
+                            </tr>
+                        </tbody>
+
+                    </table>
+                    <hr />
+
+
+                    <h3>Project Gantt Chart:</h3>
+                    <hr />
+                    <button class="btn btn-info" type="button" data-toggle="modal" data-target="#exampleModal">Add To Chart</button>
+                    <div class="chart">
+                        <div class="chart-row chart-period">
+                            <div class="chart-row-item"></div>
+                            <span>Week 1</span><span>Week 2</span><span>Week 3</span><span>Week 4</span>
+                            <span>Week 5</span><span>Week 6</span><span>Week 7</span><span>Week 8</span><span>Week 9</span><span>Week 10</span><span>Week 11</span><span>Week 12             </span>
+                        </div>
+                        <div class="chart-row chart-lines">
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                        </div>
+
+
+                        @foreach (var gc in ViewData["gantt"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblGanttChart>)
+                        {
+
+
+                            <div class="chart-row">
+                                <div class="chart-row-item"></div>
+                                <ul class="chart-row-bars">
+                                    <li class="@gc.gcWeek">@gc.gcName</li>
+                                </ul>
+                            </div>
+
+
+
+
+                        }
+
+
+                    </div>
+
+
+
+
+
+
+
+
+
+                    <h3 class="p-2">Group Members:</h3>
+                    <hr />
+
+
+                    @foreach (var st in ViewData["students"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblStudents>)
+                    {
+
+
+                        <div class="col-md-5 card-body p-2 m-4" style="border:solid thin">
+                            <ul class="ul-slider">
+                                <li class="list-group">
+                                    <h3 style="margin-top:15px">@st.studentFname @st.studentLname</h3>
+                                </li>
+                                <li class="list-group">
+                                    @st.studentEmail
+                                </li>
+                                <li class="list-group">
+                                    @st.studentDOB
+                                </li>
+
+                                <li>
+                                    <button type="submit" id="submitButton" name="remove" class="btn btn-danger btn-sm" value="@st.studentID" onclick="show_alert()">
+                                        Remove
+                                    </button>
+                                </li>
+
+                            </ul>
+
+
+
+
+                        </div>
+
+
+                    }
+                    <div class=" col-md-12 card">
+                        <h3>Supervisor Tasks</h3>
+                        <br />
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Task Details
+                                    </th>
+                                    <th>
+                                        Date Created
+                                    </th>
+                                    <th>
+                                        Assigned To
+                                    </th>
+                                    <th>
+                                        Status
+                                    </th>
+                                    <th>
+                                        Deadline
+                                    </th>
+                                    <th>Task file</th>
+                                    <th>
+                                        Remarks
+                                    </th>
+                                    <th>
+                                        Submit Here
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var ts in ViewData["groupTasks"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblGroupTasks>)
+                                {
+                                    <tr>
+
+                                        <td>
+                                            @ts.gtDetails
+                                        </td>
+                                        <td>
+                                            @ts.gtCreatedOn
+                                        </td>
+                                        <td>
+                                            @ts.AssignedTo
+                                        </td>
+                                        <td>
+                                            @ts.gtStatus
+                                        </td>
+                                        <td>
+                                            @ts.gtDeadline
+                                        </td>
+                                        <td><a href="~/SupervisorTaskFile/@ts.gtTaskfile">Download</a></td>
+                                        <td>
+                                            @ts.TaskRemarks
+                                        </td>
+                                        @if (ts.TaskRemarks == null)
+                                        {
+
+                                            if (ts.gtDeadline > DateTime.Now)
+                                            {
+                                                if (ts.AssignedTo == (string)Session["studentEmail"])
+                                                {
+                                                    if (ts.gtStatus == "pending")
+                                                    {
+
+                                                        <td>
+
+
+                                                            <a href="@Url.Action("TaskSubmission", "Groups")"> <input class="btn btn-info btn-sm" type="button" value="Submit" /></a>
+
+                                                        </td>
+                                                    }
+                                                }
+
+                                            }
+                                        }
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <br />
+                    <br />
+                    <div class=" col-md-12 card">
+                        <h3>Admin Tasks</h3>
+                        <br />
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Task Name
+                                    </th>
+                                    <th>
+                                        Details
+                                    </th>
+                                    <th>
+                                        Assigned To
+                                    </th>
+                                    <th>
+                                        Deadline
+                                    </th>
+                                    <th>
+                                        Status
+                                    </th>
+                                    <th>
+                                        Remarks
+                                    </th>
+                                    <th>
+                                        Submit Here
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var ts in ViewData["AdminTask"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblAdminTasks>)
+                                {
+                                    <tr>
+                                        <td>
+                                            @ts.AtaskName
+                                        </td>
+                                        <td>
+                                            @ts.AtaskDetails
+                                        </td>
+                                        <td>
+                                            @ts.Group
+                                        </td>
+                                        <td>
+                                            @ts.Deadline
+                                        </td>
+                                        <td>
+                                            @ts.AtaskStatus
+                                        </td>
+                                        <td>
+                                            @ts.AtaskRemarks
+                                        </td>
+                                        @if (@ts.AtaskStatus == "Pending")
+                                        {
+                                            <td>
+                                                <a href="@Url.Action("ATaskSubmission", "Groups")"> <input class="btn btn-info btn-sm" type="button" value="Submit" /></a>
+                                            </td>
+                                        }
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+
+
+
+                
+
+                <script>
+
+                    function show_alert() {
+                        alert("Are you Sure??");
+                    }
+                </script>
+
+
+                @using (Html.BeginForm())
+                {
+
+
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title" id="exampleModalLabel">Add to Gantt Chart</h3>
+
+                                </div>
+                                <div class="modal-body">
+                                    <span>Week: </span> <select name="week" class="select-form"><option value="chart-li-one">Week 1</option><option value="chart-li-two-a">Week 2</option><option value="chart-li-two-b">Week 2 and Week 3</option><option value="chart-li-three">Week 3 and Week 4</option><option value="chart-li-four">Week 3 till Week 8</option><option value="chart-li-five">Week 7 till Week 9</option><option value="chart-li-six">Week 10 and Week 11</option><option value="chart-li-seven">Week 12</option></select>
+                                    <span>Title:</span> <input type="text" class="form-control" name="title" />
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" name="desc" value="proceed" class="btn btn-secondary">Add</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+                }
+

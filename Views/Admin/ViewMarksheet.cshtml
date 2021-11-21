@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "ViewMarksheet";
+    Layout = "~/Views/Layouts/_PdfLayout.cshtml";
+}
+
+<h2>ViewMarksheet</h2>
+@foreach (var su in ViewData["generate"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblCompleteProjects>)
+{
+    <div class="container">
+        <div class="row">
+            <center>
+                <h1>IUFYP</h1>
+                <h3>FYP Mark Sheet</h3>
+                <div class="col-lg-10">
+                    <h5>FYP Group Name: <span>@su.cpGroup</span></h5>
+                    <hr />
+                    <hr />
+                    <h5>FYP Project: <span>@su.cpName</span></h5>
+                    <hr />
+                    <hr />
+                    <h5>Submission Date: <span>@su.cpSubmission</span></h5>
+                    <hr />
+                    <hr />
+                    <h5>FYP Grade: <span>@su.cpGrade</span></h5>
+                    <hr />
+                    <hr />
+                    <b><h5>Remarks: <span>@su.cpRemarks</span></h5></b>
+
+                    <hr />
+                    <hr />
+                    <a href="@Url.Action("generatePDF","Admin")"><input type="button" class="btn btn-lg btn-success" value="Generate PDF" /></a>
+
+
+
+                </div>
+            </center>
+
+        </div>
+
+    </div>
+}

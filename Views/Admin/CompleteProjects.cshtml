@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "CompleteProjects";
+    Layout = "~/Views/Layouts/_EmptyAdmin.cshtml";
+}
+
+<h2>CompleteProjects</h2>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-10">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>FYP Group</th>
+                        <th>Submission Date</th>
+                        <th>Project File</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var su in ViewData["projects"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblCompleteProjects>)
+                    {
+                        <tr>
+                            <td>
+                                @su.cpGroup
+                            </td>
+                            <td>
+                                @su.cpSubmission
+                            </td>
+                            <td>
+                                <a href="~/CompleteProjects/@su.cpName" >Download</a>
+                            </td>
+                            <td>
+                                @using (Html.BeginForm())
+                                {
+                                <button class="btn btn-info" value="@su.cpGroup" type="submit" name="remarks">Remarks</button>
+                                }
+                            </td>
+                        </tr>
+                    
+                    }
+                    </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+

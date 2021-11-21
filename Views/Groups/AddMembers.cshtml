@@ -1,0 +1,107 @@
+﻿
+
+@{
+    ViewBag.Title = "AddMembers";
+    Layout = "~/Views/Layouts/_createGroupLayout.cshtml";
+}
+<style>
+    .modal-content {
+        width: 500px;
+        height: 500px;
+    }
+</style>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<h2>AddMembers</h2>
+@using (Html.BeginForm())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="justify-content-center">Name</th>
+                <th class="justify-content-center">Father's Name</th>
+                <th class="justify-content-center">Email</th>
+                <th class="justify-content-center">Date Of Birth</th>
+                <th class="justify-content-center">Select</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var st in ViewData["students"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblStudents>)
+            {
+                <tr>
+                    <td>
+                        @st.studentFname @st.studentLname
+                    </td>
+                    <td>
+                        @st.studentPname
+                    </td>
+                    <td>
+                        @st.studentEmail
+                    </td>
+                    <td>@st.studentDOB</td>
+                    <td>
+                        <input type="checkbox" name="invite" class="custom-checkbox" value="@st.studentID" />
+
+                    </td>
+                </tr>
+            }
+            <tr>
+                <td>
+                    <input type="submit" onclick="success()" class="btn btn-inverse-success btn-lg" id="btnShowModal" />
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+}
+
+<div class="modal fade" tabindex="-1" id="loginModal"
+     data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Invitation Sent Successfully</h2>
+            </div>
+            <div class="modal-body">
+                <button type="button" id="btnHideModal" class="btn btn-primary btn-lg">
+                    Close
+                </button>
+                </div>
+                <div class="modal-footer">
+                   
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+
+</script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script>
+    function success() {
+        alert("Invitation Sent Successfully!!!");
+    }
+</script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#btnShowModal").click(function () {
+            $("#loginModal").modal('show');
+        });
+
+        $("#btnHideModal").click(function () {
+            $("#loginModal").modal('hide');
+        });
+        $("#sendinvite").click(function () {
+            alert("Invite Sent Successfully!");
+            $("#loginModal").modal('hide');
+
+
+        });
+    });
+</script>
+
+

@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "TaskSubmission";
+    Layout = "~/Views/Layouts/_EmptyLayout.cshtml";
+}
+
+<h2>Submit Your Task</h2>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 card">
+                
+            <div class="col-md-5">
+                @using (Html.BeginForm("TaskSubmission", "Groups", FormMethod.Post, new { enctype = "multipart/Form-data" }))
+
+                {
+
+                    <input type="file" class="file-upload-info mt-3" name="taskfile" />
+                    foreach (var ts in ViewData["supervisor"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblGroup>)
+                    {
+                        <input type="hidden" value="@ts.groupSupervisor" name="supervisor" />
+                        foreach (var te in ViewData["details"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblGroupTasks>)
+                        {
+                            <input type="hidden" value="@te.gtprogress" name="progress" />
+                        }
+                        <input type="submit" class="btn btn-success btn-lg " onclick="success()" value="Submit" name="submit" />
+                    }
+                }
+                </div>
+            </div>
+    </div>
+</div>
+                
+<script>
+    function success() {
+        alert("Task Submitted Successfully!!!");
+    }
+</script>
+

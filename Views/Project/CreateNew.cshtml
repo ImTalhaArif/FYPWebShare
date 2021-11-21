@@ -1,0 +1,48 @@
+﻿@model TheFinalProduct_FYP_.db_fypManagement.tblProjects
+
+@{
+    ViewBag.Title = "CreateNew";
+    Layout = "~/Views/Layouts/_EmptyLayout.cshtml";
+}
+
+<h2>Create A New Project</h2>
+
+@using (Html.BeginForm("CreateNew", "Project", FormMethod.Post, new { enctype = "multipart/Form-data" }))
+{
+
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <h5 style="margin-bottom:15px;margin-top:15px">Name Your Project</h5>
+            <div class="col-md-12">
+                @Html.EditorFor(model => model.projectName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.projectName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <h5 style="margin-bottom:15px;margin-top:15px">Project Proposal</h5>
+            <div class="col-md-12">
+                <input type="file" name="file" required/>
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-12">
+                <input type="submit" value="Create Project" class="btn btn-success btn-lg" onclick="success()"/>
+            </div>
+        </div>
+    </div>
+}
+
+<script>
+    function success() {
+        alert("Project Created Successfully!!!");   
+    }
+</script>

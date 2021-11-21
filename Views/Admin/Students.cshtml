@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Students";
+    Layout = "~/Views/Layouts/_EmptyAdmin.cshtml";
+}
+
+<h2>Students</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Student Name
+            </th>
+            <th>
+                Father's Name'
+            </th>
+            <th>Student Email</th>
+            <th>
+                Student DOB
+            </th>
+            <th>
+                Student Group
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var sr in ViewData["students"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblStudents>)
+        {
+
+            <tr>
+                <td>
+                    @sr.studentFname @sr.studentLname
+                </td>
+                <td>
+                    @sr.studentPname
+                </td>
+                <td>
+                    @sr.studentEmail
+                </td>
+                <td>
+                    @sr.studentDOB
+                </td>
+                <td>
+                    @sr.studentGroup
+                </td>
+                <td>
+                    @using (Html.BeginForm())
+                    {
+                        <button type="submit" name="student" value="@sr.studentID" class="btn btn-danger">Terminate Student</button>
+                    }
+                </td>
+            </tr>
+
+
+        }
+        </tbody>
+
+</table>
+

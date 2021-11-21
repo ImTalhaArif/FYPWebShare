@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "RequestDetails";
+    Layout = "~/Views/Layouts/_SupervisorEmpty.cshtml";
+}
+
+<h2>Group Details</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 card">
+            @foreach (var su in ViewData["groupdetails"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblGroup>)
+            {
+
+                <h2>Group Leader: <span>@su.leader</span></h2>
+                <h3>Group Members: <span>@su.MembersCount</span></h3>
+                foreach (var pr in ViewData["project"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblProjects>)
+                {
+                    <h3>Group Project: <span>@su.groupProject</span></h3> <a href="~/StudentProjects/@pr.ProjectProposal">Download</a>
+                }
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Father's Name</th>
+                            <th>Student Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var me in ViewData["members"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblStudents>)
+                        {
+                            <tr>
+                                <td>
+                                    @me.studentFname @me.studentLname
+                                </td>
+                                <td>
+                                    @me.studentLname
+                                </td>
+                                <td>
+                                    @me.studentEmail
+                                </td>
+
+                            </tr>
+                        }
+
+                    </tbody>
+
+                </table>
+                using (Html.BeginForm())
+                {
+                    <button onclick="success()" type="submit" class="btn btn-success" value="@su.groupName" name="join">Approve</button>
+                    <button onclick="fail()" type="submit" class="btn btn-danger" value="@su.groupName" name="deny">Decline</button>
+                }
+
+            }
+
+        </div>
+
+    </div>
+
+</div>
+<script>
+    function success() {
+        alert("This Group is in your supervision now, Good Luck!");
+    }
+    function fail() {
+        alert("Are you sure?");
+    }
+</script>
+

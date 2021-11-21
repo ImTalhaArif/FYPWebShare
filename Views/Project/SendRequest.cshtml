@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewBag.Title = "SendRequest";
+    Layout = "~/Views/Layouts/_createGroupLayout.cshtml";
+}
+
+<h2>Send Project Request</h2>
+@using (Html.BeginForm())
+{
+    <h2>@Session["tblGroup_groupID"]</h2>
+<table class="table">
+    <thead>
+        <tr >
+            <th class="justify-content-center">Supervisor Name</th>
+            <th class="justify-content-center">Select Project</th>
+            <th class="justify-content-center">Supervisor Projects</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <select class="select-form" style="background-color:darkslategrey; height:50px; border-radius:6px; font-size: 20px" id="super" name="supervisor">
+                    <option selected>--Supervisor--</option>
+                    @foreach (var st in ViewData["supervisors"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblSupervisors>)
+                    {
+                        <option value="@st.supervisorName" style="color: white; height: 500px">@st.supervisorName</option>
+                    }
+
+                </select>
+            </td>
+            
+            <td>
+                <select class="select-form" id="myproject" style="background-color:darkslategrey; height:50px; border-radius:6px; font-size: 20px" name="project">
+                    <option selected>--Projects--</option>
+                    @foreach (var st in ViewData["Projects"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblProjects>)
+                    {
+                        <option value="@st.projectName" style="color: white; height: 500px">@st.projectName</option>
+
+
+                    }
+
+
+                </select>
+            </td>
+            <td>
+                <select class="select-form" id="sprproject" name="project "style="background-color:darkslategrey; height:50px; border-radius:6px; font-size: 20px" >
+                    <option selected>--Projects--</option>
+                    @foreach (var st in ViewData["supervisorspr"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblSupervisorProjects>)
+                    {
+                        <option value="@st.spID" style="color: white; height: 500px">@st.spName</option>
+                    }
+
+
+                </select>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<br />
+<input type="submit" class="btn btn-info btn-lg" onclick="success()" />
+}
+<script>
+    function success() {
+        alert("Supervision Request Sent Successfully!!!");
+    }
+</script>
+<script>
+
+    $('#myproject').change(function () {
+
+        $('#sprproject').attr('disabled','sproject');
+    });
+
+    function show_alert() {
+        alert("Project Request Sent");
+    }
+
+</script>

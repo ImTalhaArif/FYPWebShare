@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "OurRequest";
+    Layout = "~/Views/Layouts/_EmptyLayout.cshtml";
+}
+@using (Html.BeginForm())
+{
+foreach (var su in ViewData["List"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblSupervisors>)
+{
+
+   
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 card">
+                <h2>Send Supervision Request to Mr.@su.supervisorName</h2>
+                <hr />
+                <h3>Choose a Project:</h3>
+
+                <div class="col-md-4">
+                    <h4>You can Choose Your Own Project:</h4> <select name="project" id="box1">
+                        <option selected value="null">Select Project</option>
+                        @foreach (var sa in ViewData["pro"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblProjects>)
+                        {
+                            <option value="@sa.projectName">@sa.projectName</option>
+
+                        }
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <h4>Or you can choose a Supervisor's Project:</h4> <select name="sproject" id="box2" .>
+                        <option selected value="null">Select Project</option>
+                        @foreach (var se in ViewData["spro"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblSupervisorProjects>)
+                        {
+                            <option>@se.spName</option>
+
+                        }
+                    </select>
+                </div>
+                <div class="col-sm-3 p-3 card">
+
+                    <input type="hidden" value="@su.supervisorName" name="supervisor" />
+
+                    <input type="submit" class="btn btn-success" onclick="success()" value="Send Request" />
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+}
+}
+<script>
+    document.getElementById('box').addEventListener('change', function () {
+        if (this.value == 1) {
+            document.getElementById('box2').disabled = true;
+        } else {
+            document.getElementById('comment').disabled = false;
+        }
+    });
+    function success() {
+        alert("Request Sent Successfully!!!");
+    }
+</script>

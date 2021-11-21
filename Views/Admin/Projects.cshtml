@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Projects";
+    Layout = "~/Views/Layouts/_EmptyAdmin.cshtml";
+}
+
+<h2>Projects</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Project Name
+            </th>
+            <th>
+                Group Name
+            </th>
+           
+            <th>Proposal Sent to
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var sr in ViewData["projects"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblProjectRequests>)
+        {
+            <tr>
+                <td>
+                    @sr.Project
+                </td>
+                <td>
+                    @sr.Group
+                </td>
+            
+                <td>
+                    @sr.Supervisor
+                </td>
+                <td>
+                    @using (Html.BeginForm())
+                    {
+                        <input type="hidden" name="supervisor" value="@sr.Supervisor" />
+                        <button class="btn btn-success" value="@sr.Project" onclick="accept()" name="accept">Accept Request</button>
+
+                        <button class="btn btn-danger" value="@sr.Project" onclick="success()" name="delete">Reject Request</button>
+                    }
+                </td>
+            </tr>
+
+        }
+        </tbody>
+</table>
+<script>
+    function success() {
+        alert("Project Deleted Successfully!!!");
+    }
+    function accept() {
+        alert("Project Accepted Successfully!!!");
+    }
+</script>

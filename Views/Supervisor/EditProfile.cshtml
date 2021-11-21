@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "EditProfile";
+    Layout = "~/Views/Layouts/_SupervisorEmpty.cshtml";
+}
+
+<h2>Edit Your Profile</h2>
+@using (Html.BeginForm())
+{
+    <div class="container-fluid">
+        <div class="row">
+            @foreach (var su in ViewData["myprofile"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblSupervisors>)
+            {
+                <div class="col-md-12 card p-4">
+                    <h5 class="p-0 mt-1">Your Name: </h5> <input type="text" class="form-control" name="yourname" value="@su.supervisorName" />
+                    <h5 class="p-0 mt-1">Your Domain: </h5>   <input type="text" class="form-control" name="domain" value="@su.supervisorDomain" />
+                    <h5 class="p-0 mt-1">Email Address: </h5>    <input type="text" class="form-control" name="email" value="@su.supervisorEmail" />
+                    <h5 class="p-0 mt-1">Password: </h5>    <input type="text" class="form-control" name="password" value="@su.supervisorPassword" />
+                </div>
+            }
+            <input type="submit" class="btn btn-lg btn-success mt-3" onclick="success()" value="Save Changes" />
+        </div>
+
+    </div>
+}
+<script>
+    function success() {
+        alert("Profile Updated Successfully!!!");
+    }
+</script>
+

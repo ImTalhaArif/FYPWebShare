@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "RequestMeeting";
+    Layout = "~/Views/Layouts/_createGroupLayout.cshtml";
+}
+
+<h2>Request Meeting</h2>
+
+@foreach (var su in ViewData["supervisor"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblGroup>)
+{
+    using (Html.BeginForm())
+    {
+<div class="col-md-5 card">
+    <h2>
+        @su.groupSupervisor
+    </h2>
+    <input type="date" class="datepicker-custom" name="meetingDate" />
+    <input type="hidden" name="supervisor" value="@su.groupSupervisor" />
+    <input type="hidden" name="group" value="@su.groupName" />
+
+    <button type="submit" onclick="success()" class="btn btn-info">Request Meeting</button>
+</div>
+        }
+    }
+<script>
+    function success() {
+        alert("Meeting Request Sent Successfully!!!");
+    }
+</script>

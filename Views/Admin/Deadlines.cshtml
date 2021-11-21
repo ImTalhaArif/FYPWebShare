@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Deadlines";
+    Layout = "~/Views/Layouts/_EmptyAdmin.cshtml";
+}
+
+<h2>Generate Deadlines</h2>
+@using (Html.BeginForm())
+{
+<div class="Container">
+    <div class="row">
+        <div class="col-md-10 card">
+            <div class="card-header">
+                Please Add Details To the Deadline:
+            </div>
+            <div class="card-body">
+                <h4>Deadline Title</h4>
+                <input type="text" class="form-control" placeholder="Deadline Title" name="title" />
+                <hr />
+                <h4>Deadline Details</h4>
+                <textarea name="details" cols="30" placeholder="Enter Details"></textarea>
+                <h4>Deadline</h4>
+                <input type="date" class="datepicker" name="date" />
+                <h4>Deadline For:</h4>
+                <select class="select-form" name="receiver">
+                    <option value="group">FYP Groups</option>
+                    <option value="supervisor">Supervisors</option>
+                </select>
+                <input type="submit" class="btn btn-success" onclick="success()" value="Send" />
+            </div>
+        </div>
+    </div>
+</div>
+}
+<script>
+    function success() {
+        alert("Deadline Notification Sent Successfully!!");
+    }
+</script>

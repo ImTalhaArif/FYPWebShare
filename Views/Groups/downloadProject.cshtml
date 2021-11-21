@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "downloadProject";
+    Layout = "~/Views/Layouts/_EmptyLayout.cshtml";
+}
+
+<h2>downloadProject</h2>
+
+@foreach (var tu in ViewData["fileup"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblProjects>)
+{
+    <a href="~/StudentProjects/@tu.ProjectProposal">DOWNLOAD</a>
+}

@@ -1,0 +1,97 @@
+﻿
+@{
+    ViewBag.Title = "AssignedTasks";
+    Layout = "~/Views/Layouts/_EmptyAdmin.cshtml";
+}
+
+<h2>Assigned Tasks</h2>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 card p-3">
+           
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            Task Name
+                        </th>
+                        <th>
+                            Task Details
+                        </th>
+                        <th>
+                            Group
+                        </th>
+                        <th>
+                            Deadline
+                        </th>
+                        <th>
+                            Task Status
+                        </th>
+                        <th>Download</th>
+                        <th>
+                            Assign Task Remarks
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var ad in ViewData["Tasks"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblAdminTasks>)
+                    {
+                        <tr>
+                            <td>
+                                @ad.AtaskName
+                            </td>
+                            <td>
+                                @ad.AtaskDetails
+                            </td>
+                            <td>
+                                @ad.Group
+                            </td>
+                            <td>
+                                @ad.Deadline
+                            </td>
+                            <td>
+                                @ad.AtaskStatus
+                            </td>
+                            @if (ad.AtaskStatus == "Completed")
+                            {
+                            <td>
+                                <a href="~/AdminTasks/@ad.AtaskFile" ><input type="button" class="btn btn-info" value="Download" /></a>
+                            </td>
+                            }
+                            else
+                            {
+                              <td>Not Submitted</td>
+                            }
+                            <td>
+                                @using (Html.BeginForm())
+                                {
+                                    <input type="hidden" name="group" value="@ad.Group" />
+                                    <select name="remarks" class="select-form">
+                                        <option selected>Select Remarks</option>
+                                        <option>Excellent</option>
+                                        <option>Good Work</option>
+                                        <option>Needs Improvement</option>
+                                    </select>
+                                    <input type="submit" onclick="success()" class="btn btn-success" value="Submit" />
+                                    }
+                            </td>
+                            <td>
+                                
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+<script>
+    function success() {
+        alert("Remarks Added Successfully!!!");
+    }
+</script>
+

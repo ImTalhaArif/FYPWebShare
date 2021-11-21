@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "ProjectSubmission";
+    Layout = "~/Views/Layouts/_EmptyLayout.cshtml";
+}
+@using (Html.BeginForm("ProjectSubmission", "Groups", FormMethod.Post, new { enctype = "multipart/Form-data" }))
+{
+
+    <h2>ProjectSubmission</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10" card>
+                <input type="file" name="file" class="file-icon" />
+                <input type="submit" name="save" value="Submit" onclick="success()" class="btn btn-lg btn-success" />
+            </div>
+        </div>
+
+    </div>
+}
+
+<script>
+    function success() {
+        alert("Project Submitted Successfully!!!");
+    }
+</script>

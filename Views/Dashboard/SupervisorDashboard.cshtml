@@ -1,0 +1,209 @@
+﻿
+@{
+    ViewBag.Title = "SupervisorDashboard";
+    Layout = "~/Views/Layouts/_SupervisorEmpty.cshtml";
+}
+
+<h2>Supervisor Dashboard</h2>
+
+
+
+@using (Html.BeginForm())
+{
+    <div class="card">
+        <div class="card-header">
+            <h3 class="p-2">Groups Under Supervision</h3>
+
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Group ID
+                            </th>
+                            <th>
+                                Group Name
+                            </th>
+                            <th>
+                                Group Project Title
+                            </th>
+                            <th>
+                                Project and Group Status
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    @foreach (var su in ViewData["mygroups"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblGroup>)
+                    {
+                        <tr>
+                            <td>
+                                @su.groupID
+                            </td>
+                            <td>
+                                @su.groupName
+                            </td>
+                            <td>
+                                @su.groupProject
+                            </td>
+                            <td>
+                                <button class="btn btn-info" type="submit" value="@su.groupName" name="more" onclick="success()">Show Analytics</button>
+                            </td>
+                        </tr>
+
+                    }
+                </table>
+
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+}
+<script>
+    function success() {
+        alert("Redirecting You to This Group's Details");
+    }
+</script>
+
+
+
+
+@using (Html.BeginForm())
+{
+    if (ViewData["submitted"] != null)
+    {
+        foreach (var aq in ViewData["submitted"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblsubmittedtasks>)
+
+
+        {
+
+
+
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Group Tasks</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h1 style="text-align: center;">There Have Been New Group Task Submissions</h1>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" name="desc" value="@aq.stName" class="btn btn-secondary">View</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+            <script>
+                $(document).ready(function () {
+                    $('#exampleModal').modal('show');
+                });
+            </script>
+        }
+    }
+}
+
+@using (Html.BeginForm())
+{
+    if (ViewData["AdminDeadline"] != null)
+    {
+        foreach (var aq in ViewData["AdminDeadline"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblAdminDeadlines>)
+
+
+        {
+
+
+
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">New Admin Notification</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h1 style="text-align: center;">@aq.adTitle</h1>
+                            <h4>@aq.adDetails</h4>
+                            <h5>Deadline: @aq.adTime</h5>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" value="@Session["studentGroup"]" name="readadmin" class="btn btn-secondary">Close</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+            <script>
+                $(document).ready(function () {
+                    $('#exampleModal').modal('show');
+                });
+            </script>
+        }
+    }
+}
+
+@using (Html.BeginForm())
+{
+    if (ViewData["request"] != null)
+    {
+        foreach (var aq in ViewData["request"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblProjectRequests>)
+
+
+        {
+
+
+
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Supervision Request</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h1 style="text-align: center;">You have New Supervision Requests, please have a look</h1>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" name="desc" value="proceed" class="btn btn-secondary">Take Me There</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+            <script>
+                $(document).ready(function () {
+                    $('#exampleModal').modal('show');
+                });
+            </script>
+        }
+    }
+}
+

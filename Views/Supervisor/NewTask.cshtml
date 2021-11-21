@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "NewTask";
+    Layout = "~/Views/Layouts/_SupervisorEmpty.cshtml";
+}@using (Html.BeginForm("NewTask", "Supervisor", FormMethod.Post, new { enctype = "multipart/Form-data" }))
+{
+<h2>NewTask</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 card">
+            @foreach (var sr in ViewData["stdetails"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblStudents>)
+            {
+                <h3>
+                    Assign New Task To @sr.studentFname @sr.studentLname
+                </h3>
+                <input type="text" class="form-control" placeholder="Title Here" name="title" />
+                <h3>
+                    Task Details
+                </h3>
+                <input type="text" class="form-control" placeholder="Title Here" name="details" />
+            
+                <h3>
+                    Deadline
+                </h3>
+                <input type="date" class="datepicker" placeholder="Deadline" name="deadline" />
+                <div class="form-group">
+                    <h5 style="margin-bottom:15px;margin-top:15px">Task File:</h5>
+                    <div class="col-md-12">
+                        <input type="file" name="file" required />
+                    </div>
+                </div>
+                <input type="hidden" name="student" value="@sr.studentEmail" />
+                <input type="hidden" name="group" value="@sr.studentGroup" />
+                <button type="submit" onclick="success()" class="btn btn-success" value="@sr.studentEmail">Assign Task</button>
+
+
+            }
+
+        </div>
+
+    </div>
+
+</div>
+<script>
+    function success() {
+        alert("New Task Created Successfully!!!");
+    }
+</script>
+}
+

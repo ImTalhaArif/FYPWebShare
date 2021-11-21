@@ -1,0 +1,93 @@
+﻿@model TheFinalProduct_FYP_.db_fypManagement.tblGroup
+
+@{
+    ViewBag.Title = "StdGroupsCreate";
+    Layout = "~/Views/Layouts/_createGroupLayout.cshtml";
+}
+
+<style>
+    .modal-content {
+        width: 500px;
+        height: 500px;
+    }
+</style>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<h2>Create a Group</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.groupName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.groupName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.groupName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" id="btnShowModal" class="btn btn-success" onclick="success()" />
+            </div>
+        </div>
+    </div>
+}
+
+<div class="modal fade" tabindex="-1" id="loginModal"
+     data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    ×
+                </button>
+                <h4 class="modal-title">Invite Student</h4>
+            </div>
+            <div class="modal-body">
+             
+            </div>
+            <div class="modal-footer">
+                <button type="submit" id="sendinvite" class="btn btn-primary button button4">Send Invite</button>
+                <button type="button" id="btnHideModal" class="btn btn-primary button button4">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+
+</script>
+<script>
+    function success() {
+        alert("Group Created Successfully!!!");
+    }
+</script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#btnShowModal").click(function () {
+            $("#loginModal").modal('show');
+        });
+
+        $("#btnHideModal").click(function () {
+            $("#loginModal").modal('hide');
+        });
+        $("#sendinvite").click(function () {
+            alert("Invite Sent Successfully!");
+            $("#loginModal").modal('hide');
+
+
+        });
+    });
+</script>

@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- links for timepicker -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.css">
+    <!-- jQuery UI CSS Reference -->
+ 
+
+    <!-- Code to wire up your DatePicker -->
+    <script type="text/javascript">
+        $(function () {
+            // This will make every element with the class "date-picker" into a DatePicker element
+            $('.date-picker').datepicker();
+        })
+    </script>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../custom-style.css">
+
+
+
+    <title>IUFYP | Welcome</title>
+</head>
+<body class="bg-dark text-white px-0">
+    <!-- <nav class="navbar navbar-expand navbar-dark ">
+      <a class="navbar-brand" href="#">IUFYP</a>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html" >Student Panel</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" href="./supervisor-login.html">Supervisor Panel</a>
+        </li>
+      </ul>
+
+
+    </nav> -->
+    <nav class="navbar navbar-expand navbar-dark px-3">
+        <a class="navbar-brand" href="#">IUFYP</a>
+
+
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" href="@Url.Action("Login","Home")">Student Panel</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./supervisor-login.html">Supervisor Panel</a>
+            </li>
+
+        </ul>
+
+
+    </nav>
+
+
+
+
+
+
+    <div class="container">
+        <!-- <div class="user-selection">
+            <a href="./index.html" class="pe-5">Student Panel</a>
+
+            <a href="./pages/supervisor-login.html">Supervisor Panel</a>
+        </div> -->
+        <div class="main-wrapper mt-5 pt-5">
+
+
+
+            <div class="wrapper mt-5 p-4 text-center">
+
+                <div class="wrapper p-4 text-center">
+                    <h1>IUFYP</h1>
+
+                    <h4 class="text-muted">Registration</h4>
+
+                    @RenderBody()
+
+
+
+
+
+                    <!-- <form autocomplete="off">
+                        <div class="row justify-content-center mb-2">
+                            <div class="col col-lg-3 col-md-6 col-12 px-1 m-2">
+                                <div class="input-group input-daterange">
+                                    <label class="ml-2 form-control text-center px-0" id="start-p" for="start">Start Date</label>
+                                    <input type="text" id="start" class="form-control text-left mr-2">
+                                </div>
+                                </div>
+                                <div class="col col-lg-3 col-md-6 col-12 px-1 m-2">
+                                <div class="input-group input-daterange">
+                                    <label class="ml-2 form-control text-center px-0" id="end-p" for="end">End Date</label>
+                                    <input type="text" id="end" class="form-control text-left mr-2">
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </form> -->
+                    <!-- <select class="form-select drp-down" aria-label="Default select example">
+
+                              <option value="" hidden>Department</option>
+                              <option value="1">FEST</option>
+                              <option value="2">BBA</option>
+                              <option value="3">BS-MDS</option>
+
+
+                      </select>
+
+                      <div class="radio-option text-start mt-2 px-3">
+                          <label for="flexRadioDefault">Register As:
+
+                          <div class="form-check reg-radio position-relative start-50">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              Student
+                            </label>
+                          </div>
+                          <div class="form-check reg-radio position-relative start-50">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+                            <label class="form-check-label" for="flexRadioDefault2">
+                              Faculty
+                            </label>
+                          </div>
+
+                        </label>
+
+                      </div>
+
+                    <label class="d-block text-start my-3 px-3" for="remember-me">
+                        <input type="checkbox" name="" id="remember-me" >
+                        Terms and Conditions
+                    </label> -->
+
+
+
+                </div>
+
+            </div>
+        </div>
+  </div>
+
+
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js"></script>
+        @RenderSection("scripts", required: false)
+
+        <script src="~/FrontEndAsstes/assets/custom-script.js"></script>
+</body>
+</html>

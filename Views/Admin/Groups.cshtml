@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "Groups";
+    Layout = "~/Views/Layouts/_EmptyAdmin.cshtml";
+}
+
+<h2>FYP Groups</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Group Name
+            </th>
+            <th>
+                Group Leader
+            </th>
+            <th>
+                Group Members
+            </th>
+            <th>
+                Group Supervisor
+            </th>
+            <th>
+                Group Project
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var sr in ViewData["Groups"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblGroup>)
+        {
+            <tr>
+                <td>
+                    @sr.groupName
+                </td>
+                <td>
+                    @sr.leader
+                </td>
+                <td>
+                    @sr.MembersCount
+                </td>
+                <td>
+                    @sr.groupSupervisor
+                </td>
+                <td>
+                    @sr.groupProject
+                </td>
+                <td>
+                    @using (Html.BeginForm())
+                    {
+
+                        <button type="submit" class="btn btn-info" value="@sr.groupName"  name="detail">View Details</button>
+
+                        <button type="submit" class="btn btn-danger" value="@sr.groupName" onclick="success()" name="group">Terminate Group</button>
+
+                    }
+                </td>
+            </tr>
+        
+        
+        
+        
+        }
+        </tbody>
+
+</table>
+
+

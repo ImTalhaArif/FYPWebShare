@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Inbox";
+    Layout = "~/Views/Layouts/_EmptyLayout.cshtml";
+}
+
+<h2>Inbox</h2>
+@using (Html.BeginForm())
+{
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 card p-3">
+            <div class="card-header">
+                <h3>Student Inbox</h3>
+                <div class="card-body">
+
+                    <button type="submit" class="btn btn-lg btn-info" value="student" name="student">Go to Inbox</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+
+        <div class="col-md-10 card p-3">
+            <div class="card-header">
+                <h3>Supervisor Inbox</h3>
+                <div class="card-body">
+                 <button type="submit" class="btn btn-lg btn-info" value="supervisor" name="supervisor" >Go to Inbox</button>    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+}
+
+

@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "supervisorInbox";
+    Layout = "~/Views/Layouts/_SupervisorEmpty.cshtml";
+}
+@using (Html.BeginForm())
+{
+
+    <h2>Leader Inbox</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 card t-scrollable">
+                @foreach (var dr in ViewData["supervisor"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblGroup>)
+                {
+                    <div class="card-header">
+                        <h3>@dr.leader</h3>
+                    </div>
+                }
+                @if (ViewData["messages"] != null)
+                {
+                    foreach (var sr in ViewData["messages"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblChats>)
+                    {
+
+                        <div class="card-body">
+                            @sr.message
+                        </div>
+                        <div class="card-body right">
+                            @foreach (var vr in ViewData["replies"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblChats>)
+                            {
+                                <p style="color:aquamarine"> @vr.message</p>
+
+                            }
+
+                        </div>
+                        <div class="card-footer">
+
+                            <input type="hidden" value="@sr.senderName" name="receiver" />
+
+                        </div>
+
+
+                    }
+                }
+                <input type="text" class="form-control P-3" name="message" placeholder="reply here" /><br /><button type="submit" class="btn btn-sm btn-success P-2">Send</button>
+
+
+            </div>
+
+        </div>
+    </div>
+}

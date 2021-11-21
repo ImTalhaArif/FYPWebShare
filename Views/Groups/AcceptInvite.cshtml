@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "AcceptInvite";
+    Layout = "~/Views/Layouts/_createGroupLayout.cshtml";
+}
+<h2>Group Invitations</h2>
+@using (Html.BeginForm())
+{
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Invite Title
+            </th>
+            <th>
+                Invite Details
+            </th>
+            <th>Group Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var st in ViewData["students"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblNotifications>)
+        {
+            <tr>
+                <td>
+                    @st.NotificationTitle
+                </td>
+                <td>
+                    @st.NotificationDetails
+                </td>
+                <td>
+                    @st.GroupName
+                </td>
+                <td><button type="submit" class="btn btn-primary" value="@st.GroupName" onclick="success()" name="invite" >Join</button></td>
+            </tr>
+
+        }
+    </tbody>
+
+</table>
+
+}
+<script>
+    function success() {
+        alert("Welcome To the group!, Redirecting you to the Dashboard!");
+    }
+</script>
+

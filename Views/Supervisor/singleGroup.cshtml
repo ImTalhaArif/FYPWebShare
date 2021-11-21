@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "singleGroup";
+    Layout = "~/Views/Layouts/_SupervisorEmpty.cshtml";
+}
+
+<h2>Group Tasks</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Task Details
+            </th>
+            <th>
+                Assigned To
+            </th>
+            <th>
+                Submitted File
+            </th>
+            <th>
+                Deadline
+            </th>
+            <th>
+                Submission Date
+            </th>
+            <th>
+                Remarks
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+
+        @foreach (var sr in ViewData["Select"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblGroupTasks>)
+        {
+        <tr>
+
+            <td>
+                @sr.gtDetails
+            </td>
+            <td>
+                @sr.AssignedTo
+            </td>
+            <td>
+                <a href="~/studentTasks/@sr.submissionFile"><input type="button" class="btn btn-info btn-sm" value="Download" /></a>
+            </td>
+            <td>
+                @sr.gtDeadline
+            </td>
+            <td>
+                @sr.submissionDate
+            </td>
+            @using (Html.BeginForm())
+            {
+                <td>
+
+                    <select class="select-form" name="remarks">
+                        <option selected>Give Remarks</option>
+                        <option>Excellent</option>
+                        <option>Good Attempt</option>
+                        <option>Needs Improvement</option>
+                        <option>Really Poor</option>
+                    </select>
+                    <input type="hidden" name="group" value="@sr.AssignedTo" />
+
+                </td>
+                <td>
+                    <button type="submit" class="btn btn-success" onclick="success()">Post Remarks</button>
+                </td>
+}
+
+
+        </tr>
+
+
+
+
+
+        }
+    </tbody>
+</table>
+<script>
+    function success() {
+        alert("Remarks Added Successfully!!!");
+    }
+</script>
+

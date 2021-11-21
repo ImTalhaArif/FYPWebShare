@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "ViewMarksheet";
+    Layout = "~/Views/Layouts/_PdfLayout.cshtml";
+}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js" integrity="sha512-tVYBzEItJit9HXaWTPo8vveXlkK62LbA+wez9IgzjTmFNLMBO1BEYladBw2wnM3YURZSMUyhayPCoLtjGh84NQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<h1 style="margin-left:840px; margin-top:50px">-IUFYP-</h1>
+@foreach (var su in ViewData["generate"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblCompleteProjects>)
+{
+
+<center>
+    <div id="capture" class="container-fluid bg-dark" style="margin-top:100px">
+        <div class="row" style="margin-left:650px">
+
+            <center>
+               
+                <h3>FYP Mark Sheet</h3>
+                <div class="col-lg-10" >
+                    <h5>FYP Group Name: <span>@su.cpGroup</span></h5>
+                    <hr />
+                    <hr />
+                    <h5>FYP Project: <span>@su.cpName</span></h5>
+                    <hr />
+                    <hr />
+                    <h5>Submission Date: <span>@su.cpSubmission</span></h5>
+                    <hr />
+                    <hr />
+                    <h5>FYP Grade: <span>@su.cpGrade</span></h5>
+                    <hr />
+                    <hr />
+                    <b><h5>Remarks: <span>@su.cpRemarks</span></h5></b>
+
+                    <hr />
+                    <hr />
+                    <a href="#" onclick="capture()">Click for screenshot!</a>
+            </center>
+
+
+
+
+        </div>
+
+    </div>
+</center>
+}
+<script>
+    function capture() {
+        html2canvas(document.querySelector("#capture")).then(canvas => {
+            document.body.appendChild(canvas)
+        });
+</script>

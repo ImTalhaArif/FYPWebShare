@@ -1,0 +1,65 @@
+﻿
+
+@{
+    ViewBag.Title = "Supervision Request";
+    Layout = "~/Views/Layouts/_SupervisorEmpty.cshtml";
+}
+
+
+
+@using (Html.BeginForm())
+{
+
+
+<h2>
+    Supervision Request
+</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Group Nme
+            </th>
+            <th>
+                Project Name
+            </th>
+            <th>
+                Superivsor Name
+            </th>
+            <th>Actions</th>
+        </tr>
+        
+    </thead>
+    <tbody>
+
+        @foreach (var st in ViewData["request"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblProjectRequests>)
+
+        {
+
+           
+
+                <tr>
+                    <td>
+                        @st.Group
+                    </td>
+                    <td>
+                        @st.Project
+                    </td>
+                    <td>
+                        @st.Supervisor
+                    </td>
+             
+                    <td><button class="btn btn-info" name="details" type="submit"  value="@st.Group">Details</button><button class="btn btn-success" name="join" onclick="success()" value="@st.Group">Approve</button></td>
+                </tr>
+            }
+        </tbody>
+</table>
+}
+<script>
+    function success() {
+        alert("This Group is in your supervision now, Good Luck!");
+    }
+</script>
+
+

@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "ApprovedMeetings";
+    Layout = "~/Views/Layouts/_createGroupLayout.cshtml";
+}
+
+<h2>Approved Meetings</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+           <th>Meeting Date</th>
+            <th>Meeting Link</th>
+            <th>Supervisor</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var st in ViewData["meetings"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblMeeting>)
+        {
+            <tr>
+                <td>
+                    @st.mDatenTime
+                </td>
+                <td>
+                    @st.meetingLink
+                </td>
+                <td>
+                    @st.meetingSupervisor
+                </td>
+            </tr>
+        }
+        </tbody>
+</table>

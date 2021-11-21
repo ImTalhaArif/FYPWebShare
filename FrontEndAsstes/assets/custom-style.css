@@ -1,0 +1,145 @@
+
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+::placeholder{
+    color: white !important;
+    opacity: 0.7 !important;
+}
+
+/* body{
+    padding: 0;
+    margin: 0;
+} */
+
+/* .main-container{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+} */
+
+/* .main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 0 auto;
+    border: 1px solid red; 
+} */
+
+.navbar{
+    background-color: rgba(106, 115, 126, 0.685);
+}
+
+.main-wrapper{
+   
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper{
+    border: 2px solid gray;
+    border-radius: 2rem;
+    
+    
+    width: 500px;
+    
+}
+/* .wrapper input:not(:last-child),  */
+.wrapper .reg-input{
+    border-style: none;
+    padding: 10px 4%;
+    border-radius: 1.5rem;
+    width: 100%;
+    outline: none;
+    background-color: rgba(120, 115, 121, 0.993);
+    color: white;
+    padding-left: 1.5rem;
+    font-size: small;
+}
+.wrapper .main-btn{
+    border-radius: 1rem;
+    min-width: 30%;
+    height: 3rem;
+}
+
+.wrapper .btn-group{
+    width: 100%;
+}
+.wrapper .input-daterange .form-control{
+    background-color: rgba(120, 115, 121, 0.993);
+    color: white;
+    border-radius: 1.5rem;
+    padding-left: 1.5rem;
+    border-style: none;
+    font-size: small;
+}
+
+/* .wrapper .btn-group .btn-primary */
+
+.wrapper .drp-down{
+    background-color: rgba(120, 115, 121, 0.993);
+    color: white;
+    opacity: 0.8;
+    border-radius: 1.5rem;
+    padding: 10px 24px;
+    font-size: small;
+    
+}
+
+
+/* .wrapper .drp-down .selector-options{
+    
+    border-bottom-left-radius: 1.2rem ;
+    border-bottom-right-radius: 1.2rem ;
+    
+    
+    border: 1px solid yellow ;
+    
+    width: 100%;
+    overflow: hidden;
+   
+} */
+/* .wrapper .reg-radio{
+    display: flex;
+} */
+
+/* ---------------------- create group styling --------------------- */
+
+.content-wrapper .form-group .select-form{
+    color: white;
+    opacity: 0.7;
+}
+.content-wrapper .form-group .form-control{
+    color: white;
+}
+.content-wrapper .member-class{
+    display: none;
+}
+
+/* ----------------------- available projects table styling -------------------- */
+
+.card-body .table-hover tbody tr:hover{
+    color: rgba(255, 255, 255, 0.726);
+    cursor: pointer;
+}
+
+/* ----------------------- messages styling ------------------ */
+
+.card-body .dropdown-menu-right .dropdown-item:hover{
+    color: white;
+}
+.card-body .preview-list .preview-item:hover{
+    background-color: #13151b;
+    /* color: rgba(255, 255, 255, 0.726); */
+    cursor: pointer;
+}
+
+.content-wrapper .card .for-scroll{
+    overflow-y: scroll;
+    height: 58vh;
+    
+}

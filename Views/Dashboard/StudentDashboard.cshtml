@@ -1,0 +1,259 @@
+﻿
+@{
+    ViewBag.Title = "StudentDashboard";
+    Layout = "~/Views/Layouts/_StudentDashboard.cshtml";
+}
+
+
+
+<h2 class="float-left">Leader Dashboard</h2>
+<br />
+<br />
+<br />
+
+
+
+<div class="row">
+    <div class="col-lg-7 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body ">
+                <h4 class="card-title">Project Progress</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Supervisor Tasks</th>
+                            <th>Assigned To</th>
+                            <th>Deadline</th>
+                            <th>Status</th>
+                            <th>File</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var ts in ViewData["tasks"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblGroupTasks>)
+                        {
+                            <tr>
+                                <td>@ts.gtDetails</td>
+                                <td>@ts.AssignedTo</td>
+                                <td>@ts.gtDeadline</td>
+                                <td>@ts.gtStatus</td>
+                                <td><a href="@Url.Action("GroupDashboard", "Groups")"><input type="button" class="btn btn-sm btn-info" value="View More" /></a></td>
+                            </tr>
+
+
+
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-5 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body ">
+                <h4 class="card-title">Admin Tasks</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Admin Task</th>
+                            <th>Deadline</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var aa in ViewData["Admin"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblAdminTasks>)
+                        {
+                            <tr>
+                                <td>@aa.AtaskName</td>
+                                <td>@aa.Deadline</td>
+                                <td>@aa.AtaskStatus</td>
+                                <td><a href="@Url.Action("GroupDashboard", "Groups")"><input type="button" class="btn btn-sm btn-info" value="View More" /></a></td>
+
+                            </tr>
+
+
+
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Approved Meeting</h4>
+                @foreach (var ab in ViewData["meetings"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblMeeting>)
+                {
+
+                    <h5>
+                        Meeting Time: @ab.mDatenTime
+                    </h5>
+                    <h5>
+                        Supervisor: @ab.meetingSupervisor
+                    </h5>
+                    <h6>Meeting Link: @ab.meetingLink</h6>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 grid-margin stretch-card">
+        <div class="card">
+            <h5 class="p-2">Requested Meetings</h5>
+            <div class="card-body">
+                @foreach (var ac in ViewData["request"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblRequestMeeting>)
+                {
+                    <h4 class="card-title">Requested Meetings</h4>
+                    <h5>
+                        Meeting Time: @ac.rmDateTime
+                    </h5>
+
+
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+@using (Html.BeginForm())
+{
+    if (ViewData["supervision"] != null)
+    {
+        foreach (var aq in ViewData["supervision"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblRequestStatus>)
+
+
+        {
+
+
+
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Supervision Request</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h1 style="text-align: center;">Your Supervision Request was @aq.rsStatus by @aq.rsSupervisor</h1>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" value="@Session["studentGroup"]" name="remove" class="btn btn-secondary">Close</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+            <script>
+                $(document).ready(function () {
+                    $('#exampleModal').modal('show');
+                });
+            </script>
+        }
+    }
+}
+
+
+
+@using (Html.BeginForm())
+{
+    if (ViewData["AdminDeadline"] != null)
+    {
+        foreach (var aq in ViewData["AdminDeadline"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblAdminDeadlines>)
+
+
+        {
+
+
+
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">New Admin Notification</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h1 style="text-align: center;">@aq.adTitle</h1>
+                            <h4>@aq.adDetails</h4>
+                            <h5>Deadline: @aq.adTime</h5>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" value="@Session["studentGroup"]" name="readadmin" class="btn btn-secondary">Close</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+            <script>
+                $(document).ready(function () {
+                    $('#exampleModal').modal('show');
+                });
+            </script>
+        }
+    }
+}
+
+
+@using (Html.BeginForm())
+{
+    if (ViewData["mytask"] != null)
+    {
+        foreach (var aq in ViewData["mytask"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblTaskNotification>)
+
+
+        {
+
+
+
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">New Group Task</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h1 style="text-align: center;">The Supervisor Assigned You a New Task</h1>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" value="@aq.tnName" name="desc" class="btn btn-secondary">View</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+            <script>
+                $(document).ready(function () {
+                    $('#exampleModal').modal('show');
+                });
+            </script>
+        }
+    }
+}
+
+

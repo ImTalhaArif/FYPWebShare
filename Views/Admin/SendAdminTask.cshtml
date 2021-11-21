@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "SendAdminTask";
+    Layout = "~/Views/Layouts/_EmptyAdmin.cshtml";
+}
+
+<h2>SendAdminTask</h2>
+@using (Html.BeginForm())
+            {
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 card">
+                            @foreach (var sr in ViewData["SINGULAR"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblGroup>)
+                            {
+                                <input type="hidden" value="@sr.groupName" />
+                                <h3> Task title</h3>
+                                <input type="text" class="form-control" placeholder="Ttile" name="name" />
+                                <h3> Task Details</h3>
+                                <input type="text" class="form-control" placeholder="Details" name="details" />
+                                <h4>
+                                    Deadline
+                                </h4>
+                                <input type="date" class="datepicker" name="deadline" />
+                                <button type="submit" class="btn btn-success" value="@sr.groupName" name="group">Assign Task</button>
+
+                            }
+
+                        </div>
+
+                    </div>
+
+                </div>
+            }
+
+<script>
+    function success() {
+        alert("New Task Sent Successfully!!!");
+    }
+</script>

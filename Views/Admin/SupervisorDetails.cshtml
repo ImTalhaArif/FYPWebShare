@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "SupervisorDetails";
+    Layout = "~/Views/Layouts/_EmptyAdmin.cshtml";
+}
+
+<h2>Supervisor Details</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 card">
+            @foreach (var sr in ViewData["details"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblSupervisors>)
+            { 
+                <h3 class="p-3">Name: @sr.supervisorName</h3>
+                <hr />
+                <h4 class="p-3">Email: @sr.supervisorEmail</h4>
+                <hr />
+                <h5 class="p-3">Domain: @sr.supervisorDomain</h5>
+                <hr />
+                <hr />
+                <h2 class="p-3">Groups Under Supervision:</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Group Name</th>
+                            <th> Group Leader</th>
+                            <th>Group Project</th>
+                            <th> Group Members</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var ar in ViewData["groups"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblGroup>)
+                        {
+                            <tr>
+                                <td>@ar.groupName</td>
+                                <td>@ar.leader</td>
+                                <td>@ar.groupProject</td>
+                                <td>@ar.MembersCount</td>
+                            </tr>
+                        }
+
+                        </tbody>
+                </table>
+            
+            
+            }
+            </div>
+    </div>
+</div>
+

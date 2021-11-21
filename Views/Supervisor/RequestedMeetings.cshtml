@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "RequestedMeetings";
+    Layout = "~/Views/Layouts/_SupervisorEmpty.cshtml";
+}
+
+<h2>Requested Meetings</h2>
+
+@using (Html.BeginForm())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Group Name
+                </th>
+                <th>
+                    Meeting Date
+                </th>
+                <th>
+                    Actions
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var st in ViewData["meetings"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblRequestMeeting>)
+            {
+            <tr>
+                <td>
+                    @st.rmGroup
+                </td>
+                <td>
+                    @st.rmDateTime
+                </td>
+                <td>
+                    <input type="text" placeholder="Zoom Meeting Link" name="zoom" class="form-control" />
+                    <input type="date" class="datepicker" name="date" />
+                    <input type="hidden" value="@st.rmGroup" name="group" />
+                    <input type="submit" name="approval" value="Approve" onclick="success()" class="btn btn-success btn-sm" />
+                </td>
+            </tr>
+                    }
+                
+            </tbody>
+    </table>
+}
+<hr />
+<hr />
+<a href="https://zoom.us/meeting/schedule" target="_blank"><input type="button" class="btn btn-outline-primary" value="Create Zoom Meeting" /></a>
+<script>
+    function success() {
+        alert("Meeting has been approved Successfully!!!");
+    }
+</script>
+

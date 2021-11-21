@@ -1,0 +1,352 @@
+﻿
+@{
+    ViewBag.Title = "AdminDashboard";
+    Layout = "~/Views/Layouts/_AdminDashboard.cshtml";
+}
+
+<style>
+
+    .chart {
+        display: grid;
+        border: 2px solid #000;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .chart-row {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        background-color: #1e2d41;
+    }
+
+        .chart-row:nth-child(odd) {
+            background-color: #C0C0C0;
+        }
+
+    .chart-period {
+        color: #fff;
+        background-color: #708090 !important;
+        border-bottom: 2px solid #000;
+        grid-template-columns: 50px repeat(12, 1fr);
+    }
+
+    .chart-lines {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+        grid-template-columns: 50px repeat(12, 1fr);
+    }
+
+    .chart-period > span {
+        text-align: center;
+        font-size: 13px;
+        align-self: center;
+        font-weight: bold;
+        padding: 15px 0;
+    }
+
+    .chart-lines > span {
+        display: block;
+        border-right: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .chart-row-item {
+        background-color: #808080;
+        border: 1px solid #000;
+        border-top: 0;
+        border-left: 0;
+        padding: 20px 0;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .chart-row-bars {
+        list-style: none;
+        display: grid;
+        padding: 15px 0;
+        margin: 0;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 10px 0;
+        border-bottom: 1px solid #000;
+    }
+
+    li {
+        font-weight: 450;
+        text-align: left;
+        font-size: 15px;
+        min-height: 15px;
+        background-color: #191c24;
+        padding: 5px 15px;
+        color: #fff;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        border-radius: 15px;
+    }
+
+    ul .chart-li-one {
+        grid-column: 1/2;
+        background-color: #588BAE;
+    }
+
+    ul .chart-li-two-a {
+        grid-column: 2/2;
+        background-color: #0080FF;
+    }
+
+    ul .chart-li-two-b {
+        grid-column: 2/4;
+        background-color: #4682B4;
+    }
+
+    ul .chart-li-three {
+        grid-column: 3/5;
+        background-color: #57A0D3;
+    }
+
+    ul .chart-li-four {
+        grid-column: 3/9;
+        background-color: #0E4D92;
+    }
+
+    ul .chart-li-five {
+        grid-column: 7/10;
+        background-color: #4F97A3;
+    }
+
+    ul .chart-li-six {
+        grid-column: 10/12;
+        background-color: #73C2FB;
+    }
+
+    ul .chart-li-seven {
+        grid-column: 12/12;
+        background-color: #0080FF;
+    }
+</style>
+
+@using (Html.BeginForm())
+{
+
+    <h2>Admin Dashboard</h2>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 card border-dark" style="overflow-y:no-display; overflow-x:hidden; height:450px">
+
+                <h4 class="p-2 t-bold" style="font-weight:200">FYP Groups and Project Progress</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Group Name
+                            </th>
+                            <th>
+                                Project Progress
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var ab in ViewData["progress"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblProjectProgress>)
+                        {
+
+                            <tr>
+                                <td>
+                                    @ab.progressGroup
+                                </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: @ab.projectProgress%">
+                                            @ab.projectProgress
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                        }
+                    </tbody>
+
+                </table>
+
+            </div>
+            <div class="col-lg-6 card border-dark" style="overflow-y:no-display; overflow-x:hidden; height:450px">
+                <h4 class="p-2 t-bold" style="font-weight:200">Active Supervisors</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Supervisor Name
+                            </th>
+                            <th>
+                                Domain
+                            </th>
+                            <th>
+                                Actions
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var ac in ViewData["supervisor"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblSupervisors>)
+                        {
+                            <tr>
+                                <td>
+                                    @ac.supervisorName
+                                </td>
+                                <td>
+                                    @ac.supervisorDomain
+                                </td>
+                                <td>
+                                    <button class="btn btn-sm btn-info" value="@ac.supervisorName" name="supervisor" type="submit">View More</button>
+                                </td>
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-11 mt-2 ml-lg-5 card float-lg-right" >
+                <center><h2 class="p-2 ">Gantt Charts</h2></center>
+                @foreach (var gc in ViewData["ganttchart"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblGanttChart>)
+                {
+
+                    <hr />
+                    <a href="@Url.Action("Groups","Admin")" class="text-decoration-none" style="color:white" > <center>@gc.gcGroup</center></a>
+                    <div class="chart">
+                        <div class="chart-row chart-period">
+                            <div class="chart-row-item"></div>
+                            <span>Week 1</span><span>Week 2</span><span>Week 3</span><span>Week 4</span>
+                            <span>Week 5</span><span>Week 6</span><span>Week 7</span><span>Week 8</span><span>Week 9</span><span>Week 10</span><span>Week 11</span><span>Week 12             </span>
+                        </div>
+                        <div class="chart-row chart-lines">
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                        </div>
+
+
+                            <div class="chart-row">
+                                <div class="chart-row-item"></div>
+                                <ul class="chart-row-bars">
+                                    <li class="@gc.gcWeek">@gc.gcName</li>
+                                </ul>
+                            </div>
+
+
+
+
+                        
+
+
+                    </div>
+
+                }
+
+            </div>
+            </div>
+        <hr />
+        <div class="row">
+            <div class="col-lg-6 card border-dark" style="overflow-y:no-display; overflow-x:hidden; height:450px">
+
+                <h4 class="p-2 t-bold" style="font-weight:200">Pending Group Tasks</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Group Name
+                            </th>
+                            <th>
+                                Task Details
+                            </th>
+                            <th>
+                                Assigned To
+                            </th>
+                            <th>
+                                Deadline
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var ts in ViewData["pendingTask"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblGroupTasks>)
+                        {
+
+                            <tr>
+                                <td>
+                                    @ts.Taskgroup
+                                </td>
+                                <td>
+                                    @ts.gtDetails
+                                </td>
+                                <td>
+                                    @ts.AssignedTo
+                                </td>
+                                <td>
+                                    @ts.gtDeadline
+                                </td>
+                            </tr>
+
+
+                        }
+                    </tbody>
+
+                </table>
+
+            </div>
+            <div class="col-lg-6 card border-dark" style="overflow-y:no-display; overflow-x:hidden; height:450px">
+
+                <h4 class="p-2 t-bold" style="font-weight:200">Completed Group Tasks</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Group Name
+                            </th>
+                            <th>
+                                Task Details
+                            </th>
+                            <th>
+                                Assigned To
+                            </th>
+                            <th>
+                                Deadline
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var js in ViewData["completeTask"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblGroupTasks>)
+                        {
+
+                            <tr>
+                                <td>
+                                    @js.Taskgroup
+                                </td>
+                                <td>
+                                    @js.gtDetails
+                                </td>
+                                <td>
+                                    @js.AssignedTo
+                                </td>
+                                <td>
+                                    @js.gtDeadline
+                                </td>
+                            </tr>
+
+
+                        }
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+        </div>
+        </div>
+    } 

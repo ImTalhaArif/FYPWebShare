@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "ViewSupervisors";
+    Layout = "~/Views/Layouts/_EmptyLayout.cshtml";
+}
+@using (Html.BeginForm())
+{
+<h2>Active Supervisors</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 ">
+            @foreach (var su in ViewData["supervisors"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblSupervisors>)
+            {
+                <div class="col-md-5 card p-3 mt-3">
+                    <h3>Name: @su.supervisorName</h3>
+                    <hr />
+                    <h4> Domain: @su.supervisorDomain</h4>
+                    <h5>Email Address: @su.supervisorEmail</h5>
+                    <button class="btn btn-info" name="details" type="submit" value="@su.supervisorID">View More</button>
+                </div>
+
+
+
+            }
+            </div>
+    </div>
+
+</div>
+}

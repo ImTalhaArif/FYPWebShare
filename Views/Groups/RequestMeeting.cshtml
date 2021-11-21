@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "RequestMeeting";
+    Layout = "~/Views/Layouts/_createGroupLayout.cshtml";
+}
+
+<h2>Request Meeting</h2>
+
+@using (Html.BeginForm())
+{
+
+
+
+    <h3> Select Meeting Date</h3>
+    <input type="date" class="datepicker" name="date" />
+
+    <input type="checkbox" class="mdi-checkbook" /> <span>I assure To be Present On time Of the Meeting Once Approved.</span>
+
+    <input type="submit" class="btn btn-info" onclick="success()" value="@Session["studentGroup"]" name="groupName" />
+    <select class="select-form" name="supervisor">
+        @foreach (var st in ViewData["supervisor"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblGroup>)
+        { 
+        
+            <option>@st.groupSupervisor</option>
+        }
+        </select>
+
+
+
+}
+<script>
+    function success() {
+        alert("Meeting Request Sent Successfully!!!");
+    }
+</script>
+

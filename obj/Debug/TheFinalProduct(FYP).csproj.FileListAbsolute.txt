@@ -1,0 +1,457 @@
+E:\TheFinalProduct(FYP)\obj\Debug\TheFinalProduct(FYP).csproj.CoreCompileInputs.cache
+E:\TheFinalProduct(FYP)\bin\TheFinalProduct(FYP).dll.config
+E:\TheFinalProduct(FYP)\bin\TheFinalProduct(FYP).dll
+E:\TheFinalProduct(FYP)\bin\TheFinalProduct(FYP).pdb
+E:\TheFinalProduct(FYP)\bin\roslyn\csc.exe
+E:\TheFinalProduct(FYP)\bin\roslyn\csc.exe.config
+E:\TheFinalProduct(FYP)\bin\roslyn\csc.rsp
+E:\TheFinalProduct(FYP)\bin\roslyn\csi.exe
+E:\TheFinalProduct(FYP)\bin\roslyn\csi.exe.config
+E:\TheFinalProduct(FYP)\bin\roslyn\csi.rsp
+E:\TheFinalProduct(FYP)\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\TheFinalProduct(FYP)\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\Microsoft.Managed.Core.targets
+E:\TheFinalProduct(FYP)\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\TheFinalProduct(FYP)\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.AppContext.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.Collections.Immutable.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.Console.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.Globalization.Calendars.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.IO.Compression.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.IO.FileSystem.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.Net.Http.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.Net.Sockets.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.Reflection.Metadata.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.ValueTuple.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.Xml.XmlDocument.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.Xml.XPath.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\vbc.exe
+E:\TheFinalProduct(FYP)\bin\roslyn\vbc.exe.config
+E:\TheFinalProduct(FYP)\bin\roslyn\vbc.rsp
+E:\TheFinalProduct(FYP)\bin\roslyn\VBCSCompiler.exe
+E:\TheFinalProduct(FYP)\bin\roslyn\VBCSCompiler.exe.config
+E:\TheFinalProduct(FYP)\bin\EntityFramework.dll
+E:\TheFinalProduct(FYP)\bin\EntityFramework.SqlServer.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.Web.Infrastructure.dll
+E:\TheFinalProduct(FYP)\bin\System.Web.Helpers.dll
+E:\TheFinalProduct(FYP)\bin\System.Web.Mvc.dll
+E:\TheFinalProduct(FYP)\bin\System.Web.Razor.dll
+E:\TheFinalProduct(FYP)\bin\System.Web.Webpages.Deployment.dll
+E:\TheFinalProduct(FYP)\bin\System.Web.Webpages.dll
+E:\TheFinalProduct(FYP)\bin\System.Web.Webpages.Razor.dll
+E:\TheFinalProduct(FYP)\bin\EntityFramework.xml
+E:\TheFinalProduct(FYP)\bin\EntityFramework.SqlServer.xml
+E:\TheFinalProduct(FYP)\bin\System.Web.Razor.xml
+E:\TheFinalProduct(FYP)\bin\System.Web.Webpages.xml
+E:\TheFinalProduct(FYP)\bin\System.Web.Webpages.Deployment.xml
+E:\TheFinalProduct(FYP)\bin\System.Web.Webpages.Razor.xml
+E:\TheFinalProduct(FYP)\bin\System.Web.Helpers.xml
+E:\TheFinalProduct(FYP)\bin\System.Web.Mvc.xml
+E:\TheFinalProduct(FYP)\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\TheFinalProduct(FYP)\obj\Debug\TheFinalProduct(FYP).csproj.CopyComplete
+E:\TheFinalProduct(FYP)\obj\Debug\TheFinalProduct(FYP).dll
+E:\TheFinalProduct(FYP)\obj\Debug\TheFinalProduct(FYP).pdb
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\TheFinalProduct(FYP).dll.config
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\TheFinalProduct(FYP).dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\TheFinalProduct(FYP).pdb
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\csc.exe
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\csc.exe.config
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\csc.rsp
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\csi.exe
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\csi.exe.config
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\csi.rsp
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.AppContext.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Console.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.IO.Compression.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Net.Http.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Net.Sockets.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.ValueTuple.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Xml.XPath.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\vbc.exe
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\vbc.exe.config
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\vbc.rsp
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\VBCSCompiler.exe
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\EntityFramework.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\EntityFramework.SqlServer.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\System.Web.Helpers.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\System.Web.Mvc.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\System.Web.Razor.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\System.Web.Webpages.Deployment.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\System.Web.Webpages.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\System.Web.Webpages.Razor.dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\EntityFramework.xml
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\EntityFramework.SqlServer.xml
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\System.Web.Razor.xml
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\System.Web.Webpages.xml
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\System.Web.Webpages.Deployment.xml
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\System.Web.Webpages.Razor.xml
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\System.Web.Helpers.xml
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\System.Web.Mvc.xml
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\obj\Debug\TheFinalProduct(FYP).csproj.CoreCompileInputs.cache
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\obj\Debug\TheFinalProduct(FYP).csproj.CopyComplete
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\obj\Debug\TheFinalProduct(FYP).dll
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\obj\Debug\TheFinalProduct(FYP).pdb
+C:\Users\God Vegeta\Documents\TheFinalProduct(FYP)\TheFinalProduct(FYP)\obj\Debug\TheFinalProduct(FYP).csproj.AssemblyReference.cache
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\TheFinalProduct(FYP).dll.config
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\TheFinalProduct(FYP).dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\TheFinalProduct(FYP).pdb
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\csc.exe
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\csc.exe.config
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\csc.rsp
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\csi.exe
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\csi.exe.config
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\csi.rsp
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\Microsoft.Managed.Core.targets
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.AppContext.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Collections.Immutable.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Console.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Globalization.Calendars.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.IO.Compression.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.IO.FileSystem.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Net.Http.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Net.Sockets.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Reflection.Metadata.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.ValueTuple.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Xml.XmlDocument.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Xml.XPath.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\vbc.exe
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\vbc.exe.config
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\vbc.rsp
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\VBCSCompiler.exe
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\roslyn\VBCSCompiler.exe.config
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\EntityFramework.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\EntityFramework.SqlServer.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\Microsoft.Web.Infrastructure.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\System.Web.Helpers.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\System.Web.Mvc.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\System.Web.Razor.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\System.Web.Webpages.Deployment.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\System.Web.Webpages.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\System.Web.Webpages.Razor.dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\EntityFramework.xml
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\EntityFramework.SqlServer.xml
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\System.Web.Razor.xml
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\System.Web.Webpages.xml
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\System.Web.Webpages.Deployment.xml
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\System.Web.Webpages.Razor.xml
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\System.Web.Helpers.xml
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\System.Web.Mvc.xml
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\obj\Debug\TheFinalProduct(FYP).csprojAssemblyReference.cache
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\obj\Debug\TheFinalProduct(FYP).csproj.CoreCompileInputs.cache
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\obj\Debug\TheFinalProduct(FYP).csproj.CopyComplete
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\obj\Debug\TheFinalProduct(FYP).dll
+E:\TheFinalProduct(FYP)\TheFinalProduct(FYP)\obj\Debug\TheFinalProduct(FYP).pdb
+E:\TheFinalProduct(FYP)\obj\Debug\TheFinalProduct(FYP).csprojAssemblyReference.cache
+E:\TheFinalProduct(FYP)\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.Owin.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.Owin.Security.dll
+E:\TheFinalProduct(FYP)\bin\Newtonsoft.Json.dll
+E:\TheFinalProduct(FYP)\bin\Owin.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.AspNet.SignalR.Core.pdb
+E:\TheFinalProduct(FYP)\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\TheFinalProduct(FYP)\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+E:\TheFinalProduct(FYP)\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\TheFinalProduct(FYP)\bin\Microsoft.Owin.xml
+E:\TheFinalProduct(FYP)\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\TheFinalProduct(FYP)\bin\Microsoft.Owin.Security.xml
+E:\TheFinalProduct(FYP)\bin\Newtonsoft.Json.xml
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\TheFinalProduct(FYP).dll.config
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\TheFinalProduct(FYP).dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\TheFinalProduct(FYP).pdb
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\csc.exe
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\csc.exe.config
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\csc.rsp
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\csi.exe
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\csi.exe.config
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\csi.rsp
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.AppContext.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.Console.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.IO.Compression.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.Net.Http.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.Net.Sockets.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.ValueTuple.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.Xml.XPath.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\vbc.exe
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\vbc.exe.config
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\vbc.rsp
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\VBCSCompiler.exe
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\EntityFramework.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\EntityFramework.SqlServer.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\Microsoft.Owin.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\Microsoft.Owin.Security.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\Newtonsoft.Json.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\Owin.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\System.Web.Helpers.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\System.Web.Mvc.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\System.Web.Razor.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\System.Web.Webpages.Deployment.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\System.Web.Webpages.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\System.Web.Webpages.Razor.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\EntityFramework.xml
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\EntityFramework.SqlServer.xml
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\Microsoft.Owin.xml
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\Microsoft.Owin.Security.xml
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\Newtonsoft.Json.xml
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\System.Web.Razor.xml
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\System.Web.Webpages.xml
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\System.Web.Webpages.Deployment.xml
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\System.Web.Webpages.Razor.xml
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\System.Web.Helpers.xml
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\System.Web.Mvc.xml
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\obj\Debug\TheFinalProduct(FYP).csproj.AssemblyReference.cache
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\obj\Debug\TheFinalProduct(FYP).csproj.CoreCompileInputs.cache
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\obj\Debug\TheFinalProduct(FYP).csproj.CopyComplete
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\obj\Debug\TheFinalProduct(FYP).dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\obj\Debug\TheFinalProduct(FYP).pdb
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.Buffers.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.Memory.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\System.Numerics.Vectors.dll
+C:\Users\God Vegeta\Pictures\TheFinalProduct(FYP)\bin\System.Numerics.Vectors.xml
+E:\TheFinalProduct(FYP)\bin\roslyn\System.Buffers.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.Memory.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.Numerics.Vectors.dll
+E:\TheFinalProduct(FYP)\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+E:\TheFinalProduct(FYP)\bin\System.Numerics.Vectors.dll
+E:\TheFinalProduct(FYP)\bin\System.Numerics.Vectors.xml
+E:\TheFinalProduct(FYP)\bin\IronRuby.dll
+E:\TheFinalProduct(FYP)\bin\IronRuby.Libraries.dll
+E:\TheFinalProduct(FYP)\bin\IronRuby.Libraries.Yaml.dll
+E:\TheFinalProduct(FYP)\bin\Jurassic.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.Dynamic.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.Scripting.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.Scripting.Metadata.dll
+E:\TheFinalProduct(FYP)\bin\SassAndCoffee.dll
+E:\TheFinalProduct(FYP)\bin\Telerik.Web.Mvc.Contrib.dll
+E:\TheFinalProduct(FYP)\bin\Telerik.Web.Mvc.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.IdentityModel.Logging.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.IdentityModel.Tokens.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.TeamFoundation.Common.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.TeamFoundation.DistributedTask.Common.Contracts.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.VisualStudio.Services.Common.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.VisualStudio.Services.WebApi.dll
+E:\TheFinalProduct(FYP)\bin\RestSharp.dll
+E:\TheFinalProduct(FYP)\bin\System.IdentityModel.Tokens.Jwt.dll
+E:\TheFinalProduct(FYP)\bin\System.Net.Http.Formatting.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+E:\TheFinalProduct(FYP)\bin\Microsoft.IdentityModel.Logging.xml
+E:\TheFinalProduct(FYP)\bin\Microsoft.IdentityModel.Tokens.xml
+E:\TheFinalProduct(FYP)\bin\Microsoft.TeamFoundation.Common.xml
+E:\TheFinalProduct(FYP)\bin\Microsoft.TeamFoundation.DistributedTask.Common.Contracts.xml
+E:\TheFinalProduct(FYP)\bin\Microsoft.VisualStudio.Services.Common.xml
+E:\TheFinalProduct(FYP)\bin\Microsoft.VisualStudio.Services.WebApi.xml
+E:\TheFinalProduct(FYP)\bin\RestSharp.xml
+E:\TheFinalProduct(FYP)\bin\System.IdentityModel.Tokens.Jwt.xml
+E:\TheFinalProduct(FYP)\bin\System.Net.Http.Formatting.xml
+E:\TheFinalProduct(FYP)\bin\cs\Microsoft.TeamFoundation.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\de\Microsoft.TeamFoundation.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\es\Microsoft.TeamFoundation.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\fr\Microsoft.TeamFoundation.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\it\Microsoft.TeamFoundation.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\ja\Microsoft.TeamFoundation.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\ko\Microsoft.TeamFoundation.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\pl\Microsoft.TeamFoundation.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\pt-BR\Microsoft.TeamFoundation.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\ru\Microsoft.TeamFoundation.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\tr\Microsoft.TeamFoundation.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\zh-Hans\Microsoft.TeamFoundation.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\zh-Hant\Microsoft.TeamFoundation.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\cs\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\de\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\es\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\fr\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\it\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\ja\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\ko\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\pl\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\pt-BR\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\ru\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\tr\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\zh-Hans\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\zh-Hant\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\TheFinalProduct(FYP)\bin\cs\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\TheFinalProduct(FYP)\bin\de\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\TheFinalProduct(FYP)\bin\es\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\TheFinalProduct(FYP)\bin\fr\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\TheFinalProduct(FYP)\bin\it\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\TheFinalProduct(FYP)\bin\ja\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\TheFinalProduct(FYP)\bin\ko\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\TheFinalProduct(FYP)\bin\pl\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\TheFinalProduct(FYP)\bin\pt-BR\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\TheFinalProduct(FYP)\bin\ru\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\TheFinalProduct(FYP)\bin\tr\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\TheFinalProduct(FYP)\bin\zh-Hans\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\TheFinalProduct(FYP)\bin\zh-Hant\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\TheFinalProduct(FYP)\bin\HttpMultipartParser.dll
+E:\TheFinalProduct(FYP)\bin\jose-jwt.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.Bcl.AsyncInterfaces.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.Extensions.Configuration.Binder.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.Extensions.Configuration.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.Extensions.DependencyInjection.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.Extensions.Logging.Abstractions.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.Extensions.Logging.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.Extensions.Options.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.Extensions.Primitives.dll
+E:\TheFinalProduct(FYP)\bin\Microsoft.IO.RecyclableMemoryStream.dll
+E:\TheFinalProduct(FYP)\bin\Pathoschild.Http.Client.dll
+E:\TheFinalProduct(FYP)\bin\System.Buffers.dll
+E:\TheFinalProduct(FYP)\bin\System.ComponentModel.Annotations.dll
+E:\TheFinalProduct(FYP)\bin\System.Memory.dll
+E:\TheFinalProduct(FYP)\bin\System.Runtime.CompilerServices.Unsafe.dll
+E:\TheFinalProduct(FYP)\bin\System.Threading.Tasks.Extensions.dll
+E:\TheFinalProduct(FYP)\bin\System.ValueTuple.dll
+E:\TheFinalProduct(FYP)\bin\ZoomNet.dll
+E:\TheFinalProduct(FYP)\bin\HttpMultipartParser.xml
+E:\TheFinalProduct(FYP)\bin\Microsoft.Bcl.AsyncInterfaces.xml
+E:\TheFinalProduct(FYP)\bin\Microsoft.Extensions.Configuration.xml
+E:\TheFinalProduct(FYP)\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+E:\TheFinalProduct(FYP)\bin\Microsoft.Extensions.Configuration.Binder.xml
+E:\TheFinalProduct(FYP)\bin\Microsoft.Extensions.DependencyInjection.xml
+E:\TheFinalProduct(FYP)\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+E:\TheFinalProduct(FYP)\bin\Microsoft.Extensions.Logging.xml
+E:\TheFinalProduct(FYP)\bin\Microsoft.Extensions.Logging.Abstractions.xml
+E:\TheFinalProduct(FYP)\bin\Microsoft.Extensions.Options.xml
+E:\TheFinalProduct(FYP)\bin\Microsoft.Extensions.Primitives.xml
+E:\TheFinalProduct(FYP)\bin\Microsoft.IO.RecyclableMemoryStream.xml
+E:\TheFinalProduct(FYP)\bin\Pathoschild.Http.Client.xml
+E:\TheFinalProduct(FYP)\bin\System.Buffers.xml
+E:\TheFinalProduct(FYP)\bin\System.Memory.xml
+E:\TheFinalProduct(FYP)\bin\System.Runtime.CompilerServices.Unsafe.xml
+E:\TheFinalProduct(FYP)\bin\System.Threading.Tasks.Extensions.xml
+E:\TheFinalProduct(FYP)\bin\System.ValueTuple.xml
+E:\TheFinalProduct(FYP)\bin\ZoomNet.xml
+E:\TheFinalProduct(FYP)\bin\ChatJs.Lib.dll
+E:\TheFinalProduct(FYP)\bin\Rotativa.dll

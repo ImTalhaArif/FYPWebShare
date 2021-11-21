@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Marksheet";
+    Layout = "~/Views/Layouts/_EmptyAdmin.cshtml";
+}
+@using (Html.BeginForm())
+{
+
+<h2>Generate Marksheet</h2>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-10">
+            <h3>Fill All the Details Properly:</h3>
+
+            @foreach (var su in ViewData["cpgroup"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblCompleteProjects>)
+            {
+                <hr />
+                <span>Group Name: </span><input type="text" class="form-control bg-dark" value="@su.cpGroup" name="groups" disabled />
+                <hr />
+                <span>Project: </span><input type="text" class="form-control bg-dark" value="@su.cpName" name="project" disabled />
+                <hr />
+                <span>Submission Date: </span><input type="text" class="form-control bg-dark" value="@su.cpSubmission" name="date" disabled />
+                <hr />
+                <span>Project Remarks: </span><textarea type="text" class="form-control bg-dark" placeholder="Write Your Remarks" name="remarks"></textarea>
+                <hr />
+                <select class="select-form" name="grade">
+                    <option>Select Grade</option>
+                    <option style="color:green" value="A+">A+</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option style="color:red" value="F">F</option>
+                </select>
+
+                <input type="hidden" value="@su.cpGroup" name="group" />
+                <button class="btn btn-lg btn-success" name="go" type="submit">Create Marksheet</button>
+
+
+            }
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+</div>
+}

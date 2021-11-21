@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Projects";
+    Layout = "~/Views/Layouts/_SupervisorEmpty.cshtml";
+}
+
+<h2>My Projects</h2>
+@using (Html.BeginForm())
+{
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Project Name
+            </th>
+            <th>
+                Date Created
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var su in ViewData["MyProjects"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblSupervisorProjects>)
+
+        {
+            <tr>
+                <td>
+                    @su.spName
+                </td>
+                <td>
+                    @su.spDate
+                </td>
+                <td>
+                    <button type="submit" value="@su.spName" name="abc" class="btn btn-info">Delete</button>
+                </td>
+            </tr>
+        }
+        </tbody>
+</table>
+}

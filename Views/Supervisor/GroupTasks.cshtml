@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "GroupTasks";
+    Layout = "~/Views/Layouts/_SupervisorEmpty.cshtml";
+}
+
+<h2>Select A Group</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Group Name
+            </th>
+            <th>
+                Project Name
+            </th>
+            <th>
+                Group Leader
+            </th>
+            <th>
+                Group Members
+            </th>
+            <th>
+                View More
+            </th>
+        </tr>
+    </thead>
+
+    
+    <tbody>
+
+        @foreach (var sr in ViewData["mygroups"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblGroup>)
+        {
+            <tr>
+                <td>
+                    @sr.groupName
+                </td>
+                <td>
+                    @sr.groupProject
+                </td>
+                <td>
+                    @sr.leader
+                </td>
+                <td>
+                    @sr.MembersCount
+                </td>
+                @using (Html.BeginForm())
+                {
+                    <td>
+                        <button class="btn btn-info" type="submit" value="@sr.groupName" onclick="success()" name="group">View More</button>
+                    </td>
+                }
+            </tr>
+        }
+
+    </tbody>
+</table>
+<script>
+    function success() {
+        alert("Showing you all the Submitted tasks ");
+    }
+</script>
+

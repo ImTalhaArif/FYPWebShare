@@ -1,0 +1,445 @@
+﻿
+@{
+    ViewBag.Title = "ViewMore";
+    Layout = "~/Views/Layouts/_SupervisorEmpty.cshtml";
+}
+<style>
+
+
+
+    .chart {
+        display: grid;
+        border: 2px solid #000;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .chart-row {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        background-color: #1e2d41;
+    }
+
+        .chart-row:nth-child(odd) {
+            background-color: #C0C0C0;
+        }
+
+    .chart-period {
+        color: #fff;
+        background-color: #708090 !important;
+        border-bottom: 2px solid #000;
+        grid-template-columns: 50px repeat(12, 1fr);
+    }
+
+    .chart-lines {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+        grid-template-columns: 50px repeat(12, 1fr);
+    }
+
+    .chart-period > span {
+        text-align: center;
+        font-size: 13px;
+        align-self: center;
+        font-weight: bold;
+        padding: 15px 0;
+    }
+
+    .chart-lines > span {
+        display: block;
+        border-right: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .chart-row-item {
+        background-color: #808080;
+        border: 1px solid #000;
+        border-top: 0;
+        border-left: 0;
+        padding: 20px 0;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .chart-row-bars {
+        list-style: none;
+        display: grid;
+        padding: 15px 0;
+        margin: 0;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 10px 0;
+        border-bottom: 1px solid #000;
+    }
+
+    li {
+        font-weight: 450;
+        text-align: left;
+        font-size: 15px;
+        min-height: 15px;
+        background-color: #191c24;
+        padding: 5px 15px;
+        color: #fff;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        border-radius: 15px;
+    }
+
+    ul .chart-li-one {
+        grid-column: 1/2;
+        background-color: #588BAE;
+    }
+
+    ul .chart-li-two-a {
+        grid-column: 2/2;
+        background-color: #0080FF;
+    }
+
+    ul .chart-li-two-b {
+        grid-column: 2/4;
+        background-color: #4682B4;
+    }
+
+    ul .chart-li-three {
+        grid-column: 3/5;
+        background-color: #57A0D3;
+    }
+
+    ul .chart-li-four {
+        grid-column: 3/9;
+        background-color: #0E4D92;
+    }
+
+    ul .chart-li-five {
+        grid-column: 7/10;
+        background-color: #4F97A3;
+    }
+
+    ul .chart-li-six {
+        grid-column: 10/12;
+        background-color: #73C2FB;
+    }
+
+    ul .chart-li-seven {
+        grid-column: 12/12;
+        background-color: #0080FF;
+    }
+
+
+    .dropbtn {
+        background-color: #3498DB;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+        /* Dropdown button on hover & focus */
+        .dropbtn:hover, .dropbtn:focus {
+            background-color: #2980B9;
+        }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+            /* Change color of dropdown links on hover */
+            .dropdown-content a:hover {
+                background-color: #ddd
+            }
+
+    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+    .show {
+        display: block;
+    }
+</style>
+
+<h2>Group Details</h2>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-11 card p-3">
+            @foreach (var su in ViewData["single"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblGroup>)
+            {
+                foreach (var sc in ViewData["project"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblProjects>)
+                {
+
+                    <h4>Group Name: @su.groupName</h4>
+                    <h4>Group Leader: @su.leader</h4>
+                    <h4>Group Project: @su.groupProject</h4><a href="~/StudentProjects/@sc.ProjectProposal">Download</a>
+                    <h4>Group Members: @su.MembersCount</h4>
+                    }
+
+                }
+                @foreach (var ds in ViewData["progress"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblProjectProgress>)
+                {
+
+                    <h5>Project Completion Status:</h5>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: @ds.projectProgress%">
+                            @ds.projectProgress%
+                        </div>
+                    </div>
+
+                }
+                <hr />
+                <h3>Group Members:</h3>
+                <hr />
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>
+                                Student Name
+                            </th>
+
+                            <th>
+                                Student DOB
+                            </th>
+                            <th>
+                                Actions
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var sr in ViewData["members"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblStudents>)
+                        {
+
+                            <tr>
+                                <td>
+                                    @sr.studentFname @sr.studentLname
+                                </td>
+
+                                <td>
+                                    @sr.studentDOB
+                                </td>
+                                <td>
+                                    @using (Html.BeginForm())
+                                    {
+                                        <button type="submit" value="@sr.studentEmail" class="btn btn-info" name="student">Assign Task</button>
+                                    }
+                                </td>
+                            </tr>
+
+                        }
+
+
+                    </tbody>
+                </table>
+
+                <h3>Weekly Log Chart:</h3>
+                <hr />
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th> Details</th>
+                            <th>Created By</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var lc in ViewData["logchart"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblLogChart>)
+                        {
+                            <tr>
+                                <td>
+                                    @lc.lcDate
+                                </td>
+                                <td>
+                                    @lc.lcDetail
+                                </td>
+                                <td>
+                                    @lc.lcCreatedby
+                                </td>
+                            </tr>
+
+
+                        }
+
+                    </tbody>
+
+                </table>
+
+
+                <h3>Project Gantt Chart:</h3>
+                <hr />
+
+                <div class="chart">
+                    <div class="chart-row chart-period">
+                        <div class="chart-row-item"></div>
+                        <span>Week 1</span><span>Week 2</span><span>Week 3</span><span>Week 4</span>
+                        <span>Week 5</span><span>Week 6</span><span>Week 7</span><span>Week 8</span><span>Week 9</span><span>Week 10</span><span>Week 11</span><span>Week 12             </span>
+                    </div>
+                    <div class="chart-row chart-lines">
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                    </div>
+
+
+                    @foreach (var gc in ViewData["gantt"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblGanttChart>)
+                    {
+
+
+                        <div class="chart-row">
+                            <div class="chart-row-item"></div>
+                            <ul class="chart-row-bars">
+                                <li class="@gc.gcWeek">@gc.gcName</li>
+                            </ul>
+                        </div>
+
+
+
+
+                    }
+
+
+                </div>
+
+
+
+
+                <div id="chart_div"></div>
+
+
+                <h3 class="p-2">Given Tasks:</h3>
+                <hr />
+
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>
+                                Task Details
+                            </th>
+
+                            <th>
+                                Assigned To
+                            </th>
+                            <th>
+                                Deadline
+                            </th>
+                            <th>
+                                Status
+                            </th>
+                            <th>
+                                Remarks
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var fr in ViewData["grouptask"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblGroupTasks>)
+                        {
+
+                            <tr>
+                                <td>
+                                    @fr.gtDetails
+                                </td>
+
+                                <td>
+                                    @fr.AssignedTo
+                                </td>
+                                <td>
+                                    @fr.gtDeadline
+                                </td>
+                                <td>
+                                    @fr.gtStatus
+                                </td>
+                                <td>
+                                    @fr.TaskRemarks
+                                </td>
+                            </tr>
+
+                        }
+
+
+                    </tbody>
+
+                </table>
+                @foreach (var ou in ViewData["single"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblGroup>)
+                {
+                    using (Html.BeginForm())
+                    {
+
+                        <button class="btn btn-info" type="submit" name="group" value="@ou.groupName">Give Remarks</button>
+                    }
+                }
+                <div class="modal fade" tabindex="-1" id="loginModal"
+                     data-keyboard="false" data-backdrop="static">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">
+                                    ×
+                                </button>
+                                <h4 class="modal-title">Assign Task to </h4>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" placeholder="Invite Message"
+                                               type="text" id="inputPassword" />
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" id="sendinvite" class="btn btn-primary button button4">Send Invite</button>
+                                <button type="button" id="btnHideModal" class="btn btn-primary button button4">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+    </div>
+</div>
+<script>
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+

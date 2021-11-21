@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Remarks";
+    Layout = "~/Views/Layouts/_EmptyAdmin.cshtml";
+}
+
+<h2>Remarks</h2>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 card">
+            @foreach (var sr in ViewData["task"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblAdminTasks>)
+            {
+
+                <h3>Task Group: @sr.Group</h3>
+                <br />
+                <h3>Task Deadline: @sr.Deadline</h3>
+                <br />
+                <h4>Task Status: @sr.AtaskStatus</h4>
+                <br />
+                <a href="~/AdminTasks/@sr.AtaskFile"><input type="button" class="btn btn-info" value="Download"/></a>
+                using (Html.BeginForm())
+                {
+        <select class="select-form" name="remarks">
+            <option>Give Remarks</option>
+            <option>Excellent</option>
+            <option>Good Job</option>
+            <option>Needs Progress</option>
+
+
+        </select>
+                }
+
+            }
+            </div>
+
+    </div>
+
+</div>
+

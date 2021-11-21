@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "ApprovedMeetings";
+    Layout = "~/Views/Layouts/_SupervisorEmpty.cshtml";
+}
+
+<h2>ApprovedMeetings</h2>
+@using (Html.BeginForm())
+
+{
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Meeting Date
+                </th>
+                <th>
+                    Meeting With Group
+                </th>
+                <th>
+                    Meeting Link
+                </th>
+                <th>
+                    Actions
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var st in ViewData["approved"] as IEnumerable<TheFinalProduct_FYP_.db_fypManagement.tblMeeting>)
+            {
+                <tr>
+                    <td>
+                        @st.mDatenTime
+                    </td>
+                    <td>
+                        @st.meetingGroup
+                    </td>
+                    <td>
+                        @st.meetingLink
+                    </td>
+                    <td>
+                        <button type="submit" class="btn btn-danger" name="meet" onclick="success()" value="@st.meetingID">Discard Meeting</button>
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+
+}
+<script>
+
+    function success() {
+        alert("Are you Sure??");
+    }
+</script>

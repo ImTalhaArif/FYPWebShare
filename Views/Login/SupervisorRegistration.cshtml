@@ -1,0 +1,59 @@
+﻿@model TheFinalProduct_FYP_.db_fypManagement.tblSupervisors
+
+@{
+    ViewBag.Title = "SupervisorRegistration";
+    Layout = "~/Views/Layouts/_StudentLogin.cshtml";
+}
+
+<h2>Supervisor Registration</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+       
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <h5 style="margin-bottom:15px;margin-top:15px">Full Name</h5>
+        <div class="col-md-12">
+            @Html.EditorFor(model => model.supervisorName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.supervisorName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <h5 style="margin-bottom:15px;margin-top:15px">Email Address</h5>
+        <div class="col-md-12">
+            @Html.EditorFor(model => model.supervisorEmail, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.supervisorEmail, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <h5 style="margin-bottom:15px;margin-top:15px">Set A Password</h5>
+        <div class="col-md-12">
+            @Html.EditorFor(model => model.supervisorPassword, new { htmlAttributes = new { @class = "form-control", Type = "password" } })
+            @Html.ValidationMessageFor(model => model.supervisorPassword, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <h5 style="margin-bottom:15px;margin-top:15px">Enter Your Domain</h5>
+        <div class="col-md-12">
+            @Html.EditorFor(model => model.supervisorDomain, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.supervisorDomain, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+        <br />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-12">
+                <input type="submit" value="Register" class="btn btn-success btn-lg" />
+            </div>
+        </div>
+    </div>
+}
+
+
